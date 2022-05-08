@@ -132,6 +132,7 @@
   if (preloader) {
     window.addEventListener('load', () => {
       preloader.remove()
+      alert("This website is under active development")
     });
   }
 
