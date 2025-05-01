@@ -2,13 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="John Vincent Lanticse - Software Engineer with 8+ years of experience" />
+    <meta name="keywords" content="Software Engineer, Backend Developer, Full Stack Developer" />
 
-    <title>John Vincent Lanticse</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
-
-    <!-- Favicons -->
+    <title>John Vincent Lanticse - Software Engineer</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
     <style>
@@ -108,23 +106,24 @@
         border: 0;
         height: 1px;
         background-color: #a2a9b1;
+        margin: 1em 0;
       }
 
       .custom-h1 {
         font-size: 1.5em;
         font-family: serif;
-        margin-bottom: 0;;
+        margin-bottom: 0;
       }
 
       .custom-h2 {
         font-size: 1.35em;
         font-family: serif;
-        margin-bottom: 0;;
+        margin-bottom: 0;
       }
 
       .custom-h3 {
         font-size: 1.2em;
-        margin-bottom: 0;;
+        margin-bottom: 0;
       }
 
       /* Image styling */
@@ -132,33 +131,6 @@
         max-width: 100%;
         height: auto;
         margin: 1em 0;
-      }
-
-      /* Small text */
-      .smc {
-        font-size: 0.85em;
-        color: #666;
-      }
-
-      /* Tables */
-      table {
-        border-collapse: collapse;
-        width: 100%;
-        margin: 1em 0;
-        border: 1px solid #a2a9b1;
-        background-color: #fff;
-      }
-
-      th,
-      td {
-        border: 1px solid #a2a9b1;
-        padding: 0.5em;
-        text-align: left;
-      }
-
-      th {
-        background-color: #f2f2f2;
-        font-weight: bold;
       }
 
       /* Infobox */
@@ -173,54 +145,21 @@
         line-height: 1.3;
       }
 
-      .infobox-title {
-        font-size: 1.2em;
-        font-weight: bold;
-        text-align: center;
-        padding-bottom: 0.5em;
-        border-bottom: 1px solid #a2a9b1;
-        margin-bottom: 0.5em;
-        color: #202122;
-      }
-
       .infobox-content {
         margin: 0.5em 1.5em;
+      }
+
+      .infobox-content img {
+        width: 100%;
+        max-width: 240px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
       }
 
       .infobox-label {
         font-weight: bold;
         color: #202122;
-      }
-
-      /* Navbox */
-      .navbox {
-        margin: 1em 0;
-        border: 1px solid #a2a9b1;
-        background-color: #f8f8f8;
-        padding: 0.5em;
-      }
-
-      .navbox-title {
-        font-weight: bold;
-        text-align: center;
-        padding-bottom: 0.5em;
-        border-bottom: 1px solid #a2a9b1;
-        margin-bottom: 0.5em;
-        color: #202122;
-      }
-
-      .navbox-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5em;
-      }
-
-      .navbox-list li {
-        display: inline;
       }
 
       /* Categories section */
@@ -238,60 +177,45 @@
         color: #202122;
       }
 
-      .portal {
-        margin-top: 1em;
-        padding: 0.5em;
-        border: 1px solid #a2a9b1;
-        background-color: #f8f8f8;
-        font-size: 0.9em;
-      }
-
-      .portal-title {
-        font-weight: bold;
-        margin-bottom: 0.5em;
-        color: #202122;
-      }
-
       /* Mobile responsiveness */
       @media (max-width: 768px) {
         .container {
           padding: 10px;
         }
+        
         .infobox {
           float: none;
-          width: 100%;
-          margin-left: 0;
-          margin-bottom: 1em;
+          width: 90%;
+          margin: 1em auto;
+          padding: 1em;
         }
-        .custom-h1 {
+
+        .infobox-content {
+          margin: 0.5em 0;
           text-align: center;
         }
-        table {
-          display: block;
-          overflow-x: auto;
-          white-space: nowrap;
+
+        .infobox-content img {
+          max-width: 200px;
         }
-        .navbox-list {
-          flex-direction: column;
-        }
-        .navbox-list li {
-          display: block;
+        
+        .custom-h1 {
+          text-align: center;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <p class="custom-h1">
-        John Vincent Lanticse
-      </p>
+      <header>
+        <h1 class="custom-h1">John Vincent Lanticse</h1>
+        <hr />
+      </header>
 
-      <hr style="margin: 1em 0" />
-
-      <div class="infobox">
+      <aside class="infobox">
         <div class="infobox-content" style="text-align: center">
-          <h3 style="margin-bottom: 0;">John Vincent Lanticse</h3>
-          <img src="/img/profile.jpg" alt="john graduation picture" style="width: 240px" />
+          <h2 style="margin-bottom: 0;">John Vincent Lanticse</h2>
+          <img src="/img/profile.jpg" alt="John Vincent Lanticse graduation picture" style="width: 240px" />
         </div>
         <div class="infobox-content">
           <div><span class="infobox-label">Occupation:</span> Software Engineer</div>
@@ -302,103 +226,122 @@
         <div class="infobox-content">
           <div><span class="infobox-label">Nationality:</span> Filipino</div>
         </div>
-      </div>
+      </aside>
 
-      <p>
-        A curious Computer Engineer well-versed in Server Management  and Software Engineering in Mobile, Backend and Frontend development with 8 years of industry experience. Seeking to further grow, learn and apply his technical and professional expertise.
-      </p>
+      <main>
+        <section>
+          <p>
+            A curious Computer Engineer well-versed in Server Management and Software Engineering in Mobile, Backend and Frontend development with 8 years of industry experience. Seeking to further grow, learn and apply his technical and professional expertise.
+          </p>
+        </section>
 
-      <p class="custom-h2">Professional Background</p>
-      <hr style="margin: 1em 0" />
+        <section>
+          <h2 class="custom-h2">Professional Background</h2>
 
-      <h3 class="custom-h3">Career</h3>
-      <p>
-        I’ve built my career around solving problems through thoughtful design, solid engineering, and practical execution. Recently, I’ve stepped into leadership roles - guiding our team, driving projects, and focusing on delivering real value.
-      </p>
 
-      <p>
-        Senior Software Engineer
-      </p>
+          <section>
+            <h3 class="custom-h3">Career</h3>
+            <p>
+              I've built my career around solving problems through thoughtful design, solid engineering, and practical execution. Recently, I've stepped into leadership roles - guiding our team, driving projects, and focusing on delivering real value.
+            </p>
 
-      <p>
-        Part-time Assistant Instructor
-      </p>
+            <ul>
+              <li>
+                <strong>Senior Software Engineer</strong> - <span class="date">[Date]</span> at <span class="organization">[Organization]</span>
+                <p class="description">[Description of role and key achievements]</p>
+              </li>
+              <li>
+                <strong>Part-time Assistant Instructor</strong> - <span class="date">[Date]</span> at <span class="organization">[Organization]</span>
+                <p class="description">[Description of role and key achievements]</p>
+              </li>
+              <li>
+                <strong>Junior Software Architect</strong> - <span class="date">[Date]</span> at <span class="organization">[Organization]</span>
+                <p class="description">[Description of role and key achievements]</p>
+              </li>
+              <li>
+                <strong>Software Engineer</strong> - <span class="date">[Date]</span> at <span class="organization">[Organization]</span>
+                <p class="description">[Description of role and key achievements]</p>
+              </li>
+              <li>
+                <strong>Junior Software Engineer</strong> - <span class="date">[Date]</span> at <span class="organization">[Organization]</span>
+                <p class="description">[Description of role and key achievements]</p>
+              </li>
+            </ul>
+          </section>
 
-      <p>
-        Senior Software Engineer
-      </p>
-      <p>
-        Junior Software Architect
-      </p>
-      <p>
-        oftware Engineer
-      </p>
-      <p>
-        Junior Software Engineer
-      </p>
+          <section>
+            <h3 class="custom-h3">Skills</h3>
+            <p>
+              I'm a highly adaptable and fast learner with a broad skill set across various disciplines, demonstrating a strong ability to quickly grasp and apply new concepts as needed. My versatility and willingness to dive into unfamiliar territory make me an asset in dynamic and ever-evolving environments.
+            </p>
 
-      <h3 class="custom-h3">Skills</h3>
-      <p>
-        I’m a highly adaptable and fast learner with a broad skill set across various disciplines, demonstrating a strong ability to quickly grasp and apply new concepts as needed. My versatility and willingness to dive into unfamiliar territory make me an asset in dynamic and ever-evolving environments.
-      </p>
+            <ul>
+              <li>
+                <h4>Backend Related Skills</h4>
+                <ul>
+                  <li>Ruby on Rails (8+ years)</li>
+                  <li>Spring Boot (< 1 year)</li>
+                  <li>PostgreSQL (5+ years)</li>
+                  <li>Ubuntu VPS (8+ years)</li>
+                  <li>Nginx (3+ years)</li>
+                  <li>MySQL (2+ years)</li>
+                  <li>AWS (2+ years)</li>
+                </ul>
+              </li>
 
-      <ul>
-        <li>
-          <h4>Backend Related Skills</h4>
-          <ul>
-            <li>Ruby on Rails (8+ years)</li>
-            <li>Spring Boot (< 1 year)</li>
-            <li>PostgreSQL (5+ years)</li>
-            <li>Ubuntu VPS (8+ years)</li>
-            <li>Nginx (3+ years)</li>
-            <li>MySQL (2+ years)</li>
-            <li>AWS (2+ years)</li>
-          </ul>
-        </li>
+              <li>
+                <h4>Frontend Related Skills</h4>
+                <ul>
+                  <li>React (1+ years)</li>
+                  <li>Angular (2+ years)</li>
+                  <li>HTML, CSS, JavaScript (7+ years)</li>
+                </ul>
+              </li>
 
-        <li>
-          <h4>Frontend Related Skills</h4>
-          <ul>
-            <li>React (1+ years)</li>
-            <li>Angular (2+ years)</li>
-            <li>HTML, CSS, JavaScript (7+ years)</li>
-          </ul>
-        </li>
+              <li>
+                <h4>Mobile Related Skills</h4>
+                <ul>
+                  <li>Android (1+ years)</li>
+                  <li>iOS (< 1 year)</li>
+                  <li>Flutter (< 1 year)</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
 
-        <li>
-          <h4>Mobile Related Skills</h4>
-          <ul>
-            <li>Android (1+ years)</li>
-            <li>iOS (< 1 year)</li>
-            <li>Flutter (< 1 year)</li>
-          </ul>
-        </li>
-      </ul>
+          <section>
+            <h3 class="custom-h3">Education</h3>
+            <ul>
+              <li>
+                <strong>Master of Science in Mathematics</strong> - <span class="date">[Date]</span> at <span class="organization">[University]</span>
+                <p class="description">[Description of studies, thesis, or notable achievements]</p>
+              </li>
+              <li>
+                <strong>Bachelor of Science in Computer Engineering</strong> - <span class="date">[Date]</span> at <span class="organization">[University]</span>
+                <p class="description">[Description of studies, thesis, or notable achievements]</p>
+              </li>
+            </ul>
+          </section>
+        </section>
 
-      <h3 class="custom-h3">Education</h3>
-      <p>
-        Master of Science in Mathematics
-      </p>
-      <p>
-        Bachelor of Science in Compute Engineering
-      </p>
+        <section>
+          <h2 class="custom-h2">Closing Quote</h2>
+          <p>A thought, or perhaps a shadow of something deeper:</p>
+          <blockquote>
+            <p>
+              There is no objective 'truth' — only a plurality of perspectives, each shaped by our individual drives, desires, and cultural frameworks.
+            </p>
+            <footer>Friedrich Nietzsche, <cite>The Will to Power</cite></footer>
+          </blockquote>
+        </section>
+      </main>
 
-      <p class="custom-h2">Closing Quote</p>
-      <hr style="margin: 1em 0" />
-      <p> A thought, or perhaps a shadow of something deeper: </p>
-      <blockquote>
-        <p>
-          There is no objective 'truth' — only a plurality of perspectives, each shaped by our individual drives, desires, and cultural frameworks.
-        </p>
-        <p>Friedrich Nietzsche, <em>The Will to Power</em></p>
-      </blockquote>
-
-      <div class="categories">
+      <footer class="categories">
         <span class="categories-title">Categories:</span>
         <a href="#">Software Engineer</a>,
         <a href="#">Backend Developer</a>,
         <a href="#">Mathematics</a>
-      </div>
+      </footer>
     </div>
   </body>
 </html>
