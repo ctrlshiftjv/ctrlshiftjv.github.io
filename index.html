@@ -57,26 +57,71 @@
         background-color: #444b53;
       }
 
-      /* Dark mode toggle button */
-      .dark-toggle {
+      /* Dark mode toggle slider */
+      .dark-toggle-wrapper {
         position: fixed;
         top: 18px;
         right: 24px;
         z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
         background: #fff;
-        color: #222;
-        border: 1px solid #a2a9b1;
-        border-radius: 20px;
-        padding: 6px 16px;
-        font-size: 1em;
-        cursor: pointer;
+        border-radius: 999px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        transition: background 0.3s, color 0.3s;
+        padding: 6px 18px 6px 16px;
+        border: 1px solid #a2a9b1;
       }
-      .dark-mode .dark-toggle {
-        background: #232629;
+
+      .dark-toggle-label {
+        font-size: 1em;
+        color: #222;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+      .dark-mode .dark-toggle-label {
         color: #e6e6e6;
-        border-color: #444b53;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 48px;
+        height: 26px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 26px;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+      }
+      input:checked + .slider {
+        background-color: #232629;
+      }
+      input:checked + .slider:before {
+        transform: translateX(22px);
       }
 
       /* General container */
@@ -307,10 +352,15 @@
         .custom-h1 {
           text-align: center;
         }
-        .dark-toggle {
+        .dark-toggle-wrapper {
           right: 10px;
           top: 10px;
         }
+      }
+
+      .dark-mode .dark-toggle-wrapper {
+        background: #232629;
+        border-color: #444b53;
       }
     </style>
     <script>
@@ -319,9 +369,13 @@
         if (enabled) {
           document.body.classList.add('dark-mode');
           localStorage.setItem('darkMode', '1');
+          document.getElementById('dark-toggle-label').textContent = 'Dark Mode';
+          document.getElementById('dark-toggle-checkbox').checked = true;
         } else {
           document.body.classList.remove('dark-mode');
           localStorage.setItem('darkMode', '0');
+          document.getElementById('dark-toggle-label').textContent = 'Light Mode';
+          document.getElementById('dark-toggle-checkbox').checked = false;
         }
       }
       function toggleDarkMode() {
@@ -336,7 +390,13 @@
   </head>
   <body>
     <div class="container">
-      <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      <div class="dark-toggle-wrapper">
+        <span id="dark-toggle-label" class="dark-toggle-label">Light Mode</span>
+        <label class="switch">
+          <input type="checkbox" id="dark-toggle-checkbox" onclick="toggleDarkMode()" aria-label="Toggle dark mode" />
+          <span class="slider"></span>
+        </label>
+      </div>
       <header>
         <h1 class="custom-h1">John Vincent Lanticse</h1>
         <hr />
