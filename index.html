@@ -3,11 +3,71 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="John Vincent Lanticse - Software Engineer with 8+ years of experience" />
-    <meta name="keywords" content="Computer Engineer, Backend Developer, Full Stack Developer" />
+    <meta
+      name="description"
+      content="John Vincent Lanticse, a software engineer with 9+ years of experience building backend systems, APIs, and mobile and web applications."
+    />
 
-    <title>Computer Engineer - John Vincent Lanticse</title>
+    <title>John Vincent Lanticse - Software Engineer</title>
+    <link rel="canonical" href="https://wiki.ctrlshiftjv.dev/" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="John Vincent Lanticse" />
+    <meta property="og:url" content="https://wiki.ctrlshiftjv.dev/" />
+    <meta property="og:title" content="John Vincent Lanticse - Software Engineer" />
+    <meta
+      property="og:description"
+      content="A software engineer with 9+ years of experience building backend systems, APIs, and mobile and web applications."
+    />
+    <meta property="og:image" content="https://wiki.ctrlshiftjv.dev/img/profile.jpg" />
+    <meta property="og:image:width" content="336" />
+    <meta property="og:image:height" content="504" />
+    <meta property="og:image:alt" content="John Vincent Lanticse" />
+    <meta property="profile:first_name" content="John Vincent" />
+    <meta property="profile:last_name" content="Lanticse" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="John Vincent Lanticse - Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="A software engineer with 9+ years of experience building backend systems, APIs, and mobile and web applications."
+    />
+    <meta name="twitter:image" content="https://wiki.ctrlshiftjv.dev/img/profile.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "John Vincent Lanticse",
+        "givenName": "John Vincent",
+        "familyName": "Lanticse",
+        "jobTitle": "Software Engineer",
+        "url": "https://wiki.ctrlshiftjv.dev/",
+        "image": "https://wiki.ctrlshiftjv.dev/img/profile.jpg",
+        "nationality": "Filipino",
+        "sameAs": [
+          "https://github.com/ctrlshiftjv",
+          "https://www.linkedin.com/in/john-vincent-lanticse"
+        ],
+        "knowsLanguage": ["en"],
+        "knowsAbout": [
+          "Backend Development",
+          "Ruby on Rails",
+          "TypeScript",
+          "REST API Design",
+          "PostgreSQL",
+          "Cloud Infrastructure",
+          "Mobile Development"
+        ],
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "University of San Carlos"
+          }
+        ]
+      }
+    </script>
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Linux+Libertine:wght@700&family=Roboto:wght@400;700&display=swap');
@@ -275,6 +335,17 @@
         margin: 0.5em 1.5em;
       }
 
+      .infobox-title {
+        font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+        font-size: 1.5em;
+        line-height: 1.3;
+        font-weight: bold;
+        color: #202122;
+      }
+      .dark-mode .infobox-title {
+        color: #fff;
+      }
+
       .infobox-content img {
         width: 100%;
         max-width: 240px;
@@ -318,6 +389,7 @@
         font-size: 0.9em;
         color: #666;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 0.5em;
       }
@@ -333,6 +405,12 @@
       @media (max-width: 768px) {
         .container {
           padding: 10px;
+          /* clears the fixed toggle, which would otherwise sit on top of the h1 */
+          padding-top: 62px;
+        }
+
+        .dark-toggle-label {
+          display: none;
         }
 
         .infobox {
@@ -406,7 +484,7 @@
 
       <aside class="infobox">
         <div class="infobox-content" style="text-align: center">
-          <h2 style="margin-bottom: 0; border: none;">John Vincent Lanticse</h2>
+          <div class="infobox-title" aria-hidden="true">John Vincent Lanticse</div>
           <img src="/img/profile.jpg" alt="John Vincent Lanticse graduation picture" style="width: 240px" />
         </div>
         <div class="infobox-content">
@@ -440,7 +518,7 @@
       <main>
         <section>
           <p>
-            A computer engineer with 8+ years of industry experience in software development, well-versed in software architecture to produce clean and maintainable code. This includes production-level experience across the full development lifecycle — from writing the first line of code to deploying and maintaining systems serving thousands of users.
+            A computer engineer with 9+ years of industry experience in software development, well-versed in software architecture to produce clean and maintainable code. This includes production-level experience across the full development lifecycle, from writing the first line of code to deploying and maintaining systems serving thousands of users.
           </p>
           <p>Mobile Development: Flutter (Dart), Android (Java), iOS (Swift)</p>
           <p>Web Development: Ruby on Rails, Spring Boot, React, Angular</p>
@@ -453,7 +531,7 @@
           <section>
             <h3 class="custom-h3">Career</h3>
             <p>
-              A career built around solving problems through thoughtful design, solid engineering, and practical execution. Recently stepped into leadership roles — guiding teams, driving projects, and focusing on delivering real value.
+              A career built around solving problems through thoughtful design, solid engineering, and practical execution. Recently stepped into leadership roles: guiding teams, driving projects, and focusing on delivering real value.
             </p>
 
             <ul>
@@ -463,7 +541,7 @@
                 <span class="organization">GoTeam</span>
                 <span class="small">from</span>
                 <span class="date">November 2023 - December 2025</span>
-                <p class="description">Designed and built the foundation of a Payment Processing platform from the ground up — leading requirements gathering across stakeholder teams, defining the system architecture, developing the core Ruby on Rails application, and managing end-to-end server deployment on Heroku.</p>
+                <p class="description">Designed and built the foundation of a Payment Processing platform from the ground up: leading requirements gathering across stakeholder teams, defining the system architecture, developing the core Ruby on Rails application, and managing end-to-end server deployment on Heroku.</p>
               </li>
               <li>
                 <strong>Senior Software Engineer</strong>
@@ -595,7 +673,7 @@
           <p>A thought, or perhaps a shadow of something deeper:</p>
           <blockquote>
             <p>
-              There is no objective 'truth' — only a plurality of perspectives, each shaped by our individual drives, desires, and cultural frameworks.
+              There is no objective 'truth', only a plurality of perspectives, each shaped by our individual drives, desires, and cultural frameworks.
             </p>
             <footer>Friedrich Nietzsche, <cite>The Will to Power</cite></footer>
           </blockquote>
