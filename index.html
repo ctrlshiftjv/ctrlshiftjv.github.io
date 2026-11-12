@@ -89,7 +89,8 @@
         transition: background 0.3s, color 0.3s;
       }
       
-      body.dark-mode {
+      .dark-mode,
+      .dark-mode body {
         background-color: #181a1b;
         color: #e6e6e6;
       }
@@ -118,8 +119,17 @@
         color: #b48ead;
       }
       .dark-mode blockquote {
-        background-color: #232629;
+        background-color: #1b1e20;
+        border-left-color: #5a626b;
         color: #e6e6e6;
+      }
+      .dark-mode a:hover {
+        color: #a9c7ff;
+        background-color: #2c3136;
+        border-bottom-color: #7aaaff;
+      }
+      .dark-mode .categories {
+        color: #b9bfc6;
       }
       .dark-mode hr {
         background-color: #444b53;
@@ -460,27 +470,32 @@
       }
     </style>
     <script>
-      // Dark mode toggle logic
+      // Runs before first paint so the correct theme is applied without a flash.
+      (function () {
+        var stored = localStorage.getItem('darkMode');
+        var dark = stored === null
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : stored === '1';
+        if (dark) document.documentElement.classList.add('dark-mode');
+      })();
+
+      function syncToggleUI(enabled) {
+        var label = document.getElementById('dark-toggle-label');
+        var box = document.getElementById('dark-toggle-checkbox');
+        if (label) label.textContent = enabled ? 'Dark Mode' : 'Light Mode';
+        if (box) box.checked = enabled;
+      }
       function setDarkMode(enabled) {
-        if (enabled) {
-          document.body.classList.add('dark-mode');
-          localStorage.setItem('darkMode', '1');
-          document.getElementById('dark-toggle-label').textContent = 'Dark Mode';
-          document.getElementById('dark-toggle-checkbox').checked = true;
-        } else {
-          document.body.classList.remove('dark-mode');
-          localStorage.setItem('darkMode', '0');
-          document.getElementById('dark-toggle-label').textContent = 'Light Mode';
-          document.getElementById('dark-toggle-checkbox').checked = false;
-        }
+        document.documentElement.classList.toggle('dark-mode', enabled);
+        localStorage.setItem('darkMode', enabled ? '1' : '0');
+        syncToggleUI(enabled);
       }
       function toggleDarkMode() {
-        setDarkMode(!document.body.classList.contains('dark-mode'));
+        setDarkMode(!document.documentElement.classList.contains('dark-mode'));
       }
-      // On load, set mode from localStorage
-      window.addEventListener('DOMContentLoaded', function() {
-        const dark = localStorage.getItem('darkMode') === '1';
-        setDarkMode(dark);
+      window.addEventListener('DOMContentLoaded', function () {
+        // only mirrors the already-applied theme, so an OS-derived default is not persisted
+        syncToggleUI(document.documentElement.classList.contains('dark-mode'));
       });
     </script>
   </head>
