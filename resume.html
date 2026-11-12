@@ -56,9 +56,11 @@
       .tagline {
         margin: 2px 0 0;
         color: var(--accent);
-        font-size: 11pt;
-        font-variant: small-caps;
-        letter-spacing: 0.06em;
+        font-size: 10pt;
+        /* no small-caps and no tracking here: both make the job title extract
+           letter-by-letter, and this is the field a parser reads as the title */
+        font-weight: bold;
+        font-family: Helvetica, Arial, sans-serif;
       }
 
       .grid {
@@ -177,7 +179,9 @@
         color: #6b7177;
       }
 
-      @media (max-width: 900px) {
+      /* screen-scoped: an unqualified query also matches print, where the A4
+         content box is under 900px, and would collapse the two columns */
+      @media screen and (max-width: 900px) {
         .sheet { width: auto; min-height: 0; margin: 12px; padding: 18px; }
         .grid { grid-template-columns: 1fr; gap: 0; }
         aside { border-left: 0; padding-left: 0; }
