@@ -327,18 +327,27 @@
       .infobox {
         float: right;
         width: 300px;
-        margin-left: 1em;
-        padding: 0.5em 0.5em 1.5em 0.5em;
+        margin-left: 1.5em;
+        padding: 1em 0.75em;
         border: 1.5px solid #a2a9b1;
         background-color: #f8f8f8;
         font-size: 0.9em;
-        line-height: 1.3;
+        line-height: 1.5;
         border-radius: 10px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       }
 
       .infobox-content {
-        margin: 0.5em 1.5em;
+        margin: 0 0.75em;
+        padding: 0.7em 0;
+      }
+
+      /* separates fields whose values wrap onto a second line */
+      .infobox-content + .infobox-content {
+        border-top: 1px solid #dcdfe3;
+      }
+      .dark-mode .infobox-content + .infobox-content {
+        border-top-color: #3a4046;
       }
 
       .infobox-title {
@@ -347,6 +356,7 @@
         line-height: 1.3;
         font-weight: bold;
         color: #202122;
+        margin-bottom: 0.5em;
       }
       .dark-mode .infobox-title {
         color: #fff;
@@ -496,13 +506,19 @@
         <div class="infobox-content">
           <div>
             <span class="infobox-label">Occupation:</span>
-            <span>Software Engineer</span>
+            <span>Founder / Engineer</span>
+          </div>
+        </div>
+        <div class="infobox-content">
+          <div>
+            <span class="infobox-label">Education:</span>
+            <span>MSc Mathematics, BS Computer Engineering</span>
           </div>
         </div>
         <div class="infobox-content">
           <div>
             <span class="infobox-label">Languages:</span>
-            <span>Ruby, JavaScript</span>
+            <span>Ruby, Go, TypeScript, JavaScript</span>
           </div>
         </div>
         <div class="infobox-content">
@@ -527,7 +543,7 @@
             A computer engineer with 9+ years of industry experience in software development, well-versed in software architecture to produce clean and maintainable code. This includes production-level experience across the full development lifecycle, from writing the first line of code to deploying and maintaining systems serving thousands of users.
           </p>
           <p>Mobile Development: Flutter (Dart), Android (Java), iOS (Swift)</p>
-          <p>Web Development: Ruby on Rails, Spring Boot, React, Angular</p>
+          <p>Web Development: Ruby on Rails, Go, TypeScript (Angular, React), Spring Boot</p>
           <p>Also experienced with Linux servers and network security, along with Python and shell scripting for server administration and automation.</p>
         </section>
 
@@ -555,7 +571,8 @@
                 <span class="organization">GoTeam</span>
                 <span class="small">from</span>
                 <span class="date">November 2023 - December 2025</span>
-                <p class="description">Designed and built the foundation of a Payment Processing platform from the ground up: leading requirements gathering across stakeholder teams, defining the system architecture, developing the core Ruby on Rails application, and managing end-to-end server deployment on Heroku.</p>
+                <p class="description">Owned a payment processing platform end to end, from stakeholder requirements through system architecture, implementation, and production deployment. Designed the system for redundancy and traceability, so that any failure could be traced to its source and corrected. Ran the main service on Heroku with supporting services on AWS. Built in Ruby on Rails.</p>
+                <p class="description">Received the "Innovator Award" in 2024 for driving innovative solutions and leading the successful launch of the platform.</p>
               </li>
               <li>
                 <strong>Senior Software Engineer</strong>
@@ -571,7 +588,7 @@
                 <span class="organization">Koda Kollectiv</span>
                 <span class="small">from</span>
                 <span class="date">June 2020 - July 2022</span>
-                <p class="description">Led project estimation, architecture design, research, and planning for multiple client engagements. Evaluated and selected technologies, provisioned remote servers, and wrote automation scripts that reduced server administration overhead. Continued development and maintenance of 5+ client projects across native iOS/Android and web/API platforms using Ruby on Rails, AngularJS, and React.</p>
+                <p class="description">Led project estimation, architecture design, research, and planning for multiple client engagements. Evaluated and selected technologies, provisioned remote servers, and wrote automation scripts that reduced server administration overhead. Continued development and maintenance of 5+ client projects across native iOS/Android and web/API platforms using Ruby on Rails, Angular, AngularJS, and React.</p>
               </li>
               <li>
                 <strong>Software Engineer</strong>
@@ -605,19 +622,22 @@
             <ul>
               <li>
                 <strong>Backend Development:</strong>
-                Proficient in Ruby and Java with expertise in RESTful API design, database optimization, and modular monolithic architecture. Specialized in creating scalable, maintainable, and secure backend systems.
+                Primarily Ruby, with working experience in Java and Go. Expertise in RESTful API design, database optimization, and modular monolithic architecture, focused on building scalable, maintainable, and secure backend systems.
                 <ul>
-                  <li>Ruby on Rails <span class="medium">(8+ years)</span></li>
-                  <li>Spring Boot <span class="medium">(1 year)</span></li>
+                  <li>Ruby on Rails</li>
+                  <li>Go</li>
+                  <li>Spring Boot</li>
                 </ul>
               </li>
               <li>
                 <strong>Frontend Development:</strong>
-                Practical experience building responsive and interactive user interfaces using modern JavaScript frameworks and CSS tooling, with a strong foundation in web standards.
+                Practical experience building responsive and interactive user interfaces in TypeScript and JavaScript, with a strong foundation in web standards.
                 <ul>
-                  <li>React <span class="medium">(1+ years)</span></li>
-                  <li>Angular <span class="medium">(2+ years)</span></li>
-                  <li>HTML, CSS, JavaScript <span class="medium">(8+ years)</span></li>
+                  <li>TypeScript</li>
+                  <li>Angular <span class="medium">(2 through 10)</span></li>
+                  <li>React</li>
+                  <li>AngularJS</li>
+                  <li>HTML, CSS, JavaScript</li>
                 </ul>
               </li>
 
@@ -625,27 +645,28 @@
                 <strong>Mobile Development:</strong>
                 Hands-on experience developing mobile applications across both native and cross-platform environments, focused on building functional prototypes and production-ready features.
                 <ul>
-                  <li>Android <span class="medium">(1+ years)</span></li>
-                  <li>iOS <span class="medium">(&lt; 1 year)</span></li>
-                  <li>Flutter <span class="medium">(&lt; 1 year)</span></li>
+                  <li>Android</li>
+                  <li>iOS</li>
+                  <li>Flutter</li>
                 </ul>
               </li>
               <li>
                 <strong>Database Management:</strong>
                 Extensive experience with PostgreSQL, MySQL, and Redis. Skilled in database design, optimization, and implementing efficient data models for high-performance applications.
                 <ul>
-                  <li>PostgreSQL <span class="medium">(6+ years)</span></li>
-                  <li>MySQL <span class="medium">(2+ years)</span></li>
+                  <li>PostgreSQL</li>
+                  <li>MySQL</li>
+                  <li>Redis</li>
                 </ul>
               </li>
               <li>
                 <strong>Cloud Infrastructure:</strong>
                 Hands-on experience deploying and managing cloud services with a focus on virtual private servers (VPS), platform-as-a-service (PaaS), and automation tools for streamlined development and deployment workflows.
                 <ul>
-                  <li>Ubuntu VPS <span class="medium">(8+ years)</span></li>
-                  <li>Nginx <span class="medium">(8+ years)</span></li>
-                  <li>AWS <span class="medium">(8+ years)</span></li>
-                  <li>Heroku <span class="medium">(5+ years)</span></li>
+                  <li>Ubuntu VPS</li>
+                  <li>Nginx</li>
+                  <li>AWS</li>
+                  <li>Heroku</li>
                 </ul>
               </li>
               <li>
